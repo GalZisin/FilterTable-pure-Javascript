@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="filter" id="filter">
+            <div class="filter-btn">
+                <button class="btn" id="myBtn">הצג</button>
+            </div>
+            <div class="select-dates">
+                <div class="select-dates-column1">
+                    <div class="title">עד תאריך</div>
+                    <div class="select-toDate">
+                        <input type="date" id="date" name="date">
+                    </div>
+                </div>
+                <div class="select-dates-column2">
+                    <div class="title">מתאריך</div>
+                    <div class="select-fromDate">
+                        <input type="date" id="date" name="date">
+                    </div>
+                </div>
+            </div>
+            <div class="select-filters">
+
+                <div class="select-group-column1">
+                    <div class="title">קבוצה</div>
+                    <div class="select-group">
+                        <select id="groupsDropdown" onchange="createFilterBoxGroups()">
+                            <option value="AllGroups" selected>כל הקבוצות</option>
+                            <option>חולון</option>
+                            <option>ראשל"צ</option>
+                            <option>נס ציונה</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="select-group-column2">
+                    <div class="title">מקור הליד</div>
+                    <div class="select-makorLid">
+
+                        <select>
+                                <option value="allMekorot">כל המקורות</option>
+                                <option value="Holon">מקור 1</option>
+                                <option value="RishonLeZion">מקור 2</option>
+                                <option value="NesZiona">מקור 3</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+                <div class="select-status">
+                    <div class="title">סטטוס</div>
+                    <div class="select-s">
+                        <select id="statusDropdown" onchange="createFilterBoxStatus()">
+                            <option  value="AllStatus" selected>הכל</option>
+                            <option>לא נמכר</option>
+                            <option>נמכר!</option>
+                            <option>מאחר</option>
+                            <option>התקבל</option>
+                            <option>שיחה חוזרת</option>
+                        </select>
+                    </div>
+                    <div class="select-mehir">
+                        <select>
+                            <option value="allMekorot">מחיר</option>
+                            <option value="Holon">100</option>
+                            <option value="RishonLeZion">200</option>
+                            <option value="NesZiona">300</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="selected">
+            <ul class="flexlist" id="flexlist">
+            </ul>
+        </div>
+        <div class="table" id="table">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>הופנה על ידי</th>
+                        <th>קבוצה מטפלת</th>
+                        <th>טלפון</th>
+                        <th>שם מלא</th>
+                        <th>תאריך קבלה</th>
+                        <th>סטטוס</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>אשדוד</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44</td>
+                        <td class="green">!נמכר</td>
+                    </tr>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>חולון</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44 15.3.2021</td>
+                        <td class="yellow">מאחר</td>
+                    </tr>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>ראשל"צ</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44</td>
+                        <td class="white">התקבל</td>
+                    </tr>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>חולון</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44</td>
+                        <td class="blue">שיחה חוזרת</td>
+                    </tr>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>חולון</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44</td>
+                        <td class="red">לא נמכר</td>
+                    </tr>
+                    <tr>
+                        <td>אריאל יקימוב</td>
+                        <td>נס ציונה</td>
+                        <td>0544676767</td>
+                        <td>טום קרוז</td>
+                        <td>16:44</td>
+                        <td class="blue">שיחה חוזרת</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
